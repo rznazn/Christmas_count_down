@@ -97,7 +97,7 @@ void loop()
   {
     daysOfMonthsPast = daysOfMonthsPast + months[i];
   }
-  if (timeinfo.tm_year % 4 == 0 && timeinfo.tm_mon > 1) daysOfMonthsPast ++;
+  if (timeinfo.tm_year % 4 == 0 && timeinfo.tm_mon > 1) daysOfMonthsPast++;
   int daysTill = timeinfo.tm_year % 4 == 0 ? 360 -(timeinfo.tm_mday + daysOfMonthsPast)  : 359 - (timeinfo.tm_mday + daysOfMonthsPast) ;
   if (daysTill < 0) daysTill =  (timeinfo.tm_year + 1)% 4 == 0 ? 366 + daysTill : 365 + daysTill;
   String timeStr = String(daysTill) + " Days";
@@ -116,7 +116,7 @@ void loop()
     display.setCursor(5,7); 
     display.print(timeStr);
     display.setCursor(5,18); 
-    display.print("Till Cmas");
+    display.print("Till Xmas");
   }
  
   delay(1000 * 60 * 60);
